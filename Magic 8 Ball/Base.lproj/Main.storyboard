@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Magic_8_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball5" translatesAutoresizingMaskIntoConstraints="NO" id="hMY-82-wcG">
+                                <rect key="frame" x="54.5" y="316.5" width="305" height="273.5"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BC-Q1-ow0">
+                                <rect key="frame" x="174.5" y="690" width="65" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Ask">
+                                    <color key="titleColor" red="0.2496358454" green="0.50312918419999997" blue="0.89416354890000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="askTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVx-gt-3HD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRP-PQ-xqD">
+                                <rect key="frame" x="48.5" y="144" width="317" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.2496358454" green="0.50312918419999997" blue="0.89416354890000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="nRP-PQ-xqD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="4c8-tU-dVK"/>
+                            <constraint firstItem="hMY-82-wcG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.305246" id="5em-7S-lsS"/>
+                            <constraint firstItem="8BC-Q1-ow0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TuV-Rq-AlR"/>
+                            <constraint firstItem="nRP-PQ-xqD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Wh7-tu-rri"/>
+                            <constraint firstItem="hMY-82-wcG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.736715" id="aa8-Ma-kdL"/>
+                            <constraint firstItem="hMY-82-wcG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gF7-fV-r9e"/>
+                            <constraint firstItem="hMY-82-wcG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mpz-7s-wTB"/>
+                            <constraint firstItem="8BC-Q1-ow0" firstAttribute="top" secondItem="hMY-82-wcG" secondAttribute="bottom" constant="100" id="vjS-vU-hVd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballImageView" destination="hMY-82-wcG" id="d29-78-YWL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62.318840579710148" y="98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball5" width="305" height="273.5"/>
+    </resources>
+</document>
